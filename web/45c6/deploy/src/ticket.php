@@ -18,6 +18,7 @@ class Ticket {
     function issue() {
         $this->numbers = draw(45, 6);
     }
+    
 }
 
 ?>

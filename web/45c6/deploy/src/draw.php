@@ -31,7 +31,7 @@ if (isset($_COOKIE['ticket'])) {
         echo "Issued a ticket!<br>Check your numbers: " . implode(', ', $ticket->numbers) . "<br>";
     ?>
     <br>
-    <a href="/index.php">Click here to return to main page</a>
+    <a href="/45c6/deploy/src/index.php">Click here to return to main page</a>
 </body>
 
 </html>

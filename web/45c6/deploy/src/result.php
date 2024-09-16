@@ -34,7 +34,6 @@ function validate($cookie_ticket) {
         return;
     }
 
-
     $results = draw(45, 6);
 
     for ($i = 0; $i < 6; $i++) {
@@ -54,7 +53,7 @@ function validate($cookie_ticket) {
 
     if ($win) {
         echo "You win! get the flag: ";
-        $fp = fopen("/flag.txt", "r");
+        $fp = fopen("/45c6/deploy/flag.txt", "r");
         echo fgets($fp) . "<br>";
         fclose($fp);
     } else {
@@ -77,7 +76,7 @@ function validate($cookie_ticket) {
     <h2>Check result</h2>
     <?php validate($cookie_ticket); ?>
     <br>
-    <a href="/index.php">Click here to return to main page</a>
+    <a href="/45c6/deploy/src/index.php">Click here to return to main page</a>
 </body>
 
 </html>

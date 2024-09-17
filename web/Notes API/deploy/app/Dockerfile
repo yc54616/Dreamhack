@@ -22,4 +22,4 @@ RUN npm install
 
 USER $USER
 EXPOSE $PORT
-CMD while :; do sleep 0.5; node server.js; done
+CMD tail -f /dev/null

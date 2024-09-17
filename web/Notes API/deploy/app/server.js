@@ -89,7 +89,7 @@ app.post('/api', async (req, res, next) => {
         return;
     }
 
-    const data = await callAPI(apiInfo, req.session['isAdmin']);
+    const data = await callAPI(apiInfo, req.session['isAdmin']);    
     res.json(data);
 });
 

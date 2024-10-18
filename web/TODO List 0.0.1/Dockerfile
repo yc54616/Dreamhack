@@ -20,6 +20,7 @@ USER $USER
 RUN npm install
 
 # Run server
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+# CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+CMD tail -f /dev/null
 USER $USER
 EXPOSE $PORT

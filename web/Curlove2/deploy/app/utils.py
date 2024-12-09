@@ -20,6 +20,7 @@ def build_url(scheme, host, port, path=''):
 
         url = (scheme + host + ':' + str(port) + path).lower()
         parsed_url = parse.urlparse(url)
+        
         parsed_host = parsed_url.netloc.split(':')[0]
         if (match(r'^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$', parsed_host) and ip_address(parsed_host).is_private) or (parsed_host == 'app.com'):
             return False

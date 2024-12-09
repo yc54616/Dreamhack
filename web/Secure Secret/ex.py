@@ -1,0 +1,3 @@
+import flask_unsign
+
+print(flask_unsign.decode(".eJwtxrEVgCAMBcBdWEBiCAluE-BjYyV2PnfXwuruDhPtxBW2P3NRogix1snZZVDvjgITfIJZI6XijFjWkRIZV_Os1VSYa9aUl3H4Hp4X8VIaiQ.Z1PyXg.BmY9RLTTqi_JFBFv8XptS4BXXsc"))

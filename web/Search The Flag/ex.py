@@ -3,11 +3,11 @@ import string
 
 textTable = string.ascii_lowercase + string.digits
 
-url = "http://host3.dreamhack.games:17738/report"
+url = "http://host3.dreamhack.games:23136/report"
 
-cookies = {"session":"eyJpc0FkbWluIjpmYWxzZSwidXNlcm5hbWUiOiIxMjM0In0.Z1Z_cg.EfJb00QEoYsrZUl4mKiOmP57i18"}
+cookies = {"session":"eyJpc0FkbWluIjpmYWxzZSwidXNlcm5hbWUiOiIxMjM0In0.Z1aOPA.nuEXa8q_-NEfZ6auGTeb3_Z43a8"}
 
-flag = "DH{ffd4"
+flag = "DH{ffd487acb607e4108a9552aee8e3604f}"
 
 while True:
     for i in textTable:

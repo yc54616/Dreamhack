@@ -8,5 +8,6 @@ RUN apk add chromium
 WORKDIR /app
 RUN echo "bisc2023{FAKE_FLAG}" > flag.txt
 
+RUN npm install
 EXPOSE 3000
 CMD tail -f /dev/null

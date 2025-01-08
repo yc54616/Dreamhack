@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <iframe src="http://localhost:3000/mypage" height=600px width=600px id="if"></iframe>
+    <script>
+        var iframe = document.getElementById("if");
+        iframe.document.cookie="session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ3Vlc3QiLCJpc0xvZ2luIjp0cnVlLCJpYXQiOjE3MzU5OTQ4OTd9.zyskPjgmpTmCmK6LIuAJyttb6BHfVxslvBVqimmdso4";
+        iframe.onload();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:latest
+    networks:
+      - internal
+
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: Dreamhack
+    depends_on:
+      - redis
+    links:
+      - redis
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    networks:
+      - internal
+
+networks:
+  internal:

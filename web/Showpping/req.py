@@ -1,10 +1,10 @@
 import requests
 from threading import Thread
 
-url = "http://host1.dreamhack.games:19091"
+url = "http://host1.dreamhack.games:12760"
 
-coupon = "1f4ca86bd8a732464ece2802a0411e70c3ae04f4cf4143a9a0dc57cf4f88b234"
-cookie = {"session": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ3Vlc3QiLCJpc0xvZ2luIjp0cnVlLCJpYXQiOjE3MzYxNDgzOTZ9.QLSV3EUC4rTZFNWJTibDVeyqh076ogiTVWhkaGD9lws"}
+coupon = "e6ae686b9c8f3c4b8d4b25f70c5e88301b17b0f89640a95775f551ee1e6df07d"
+cookie = {"session": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ3Vlc3QiLCJpc0xvZ2luIjp0cnVlLCJpYXQiOjE3MzY1NTkxMTB9.ExfZ3WSCVr9Q3GrMPKbg6OZ-5tbavwXQ-6N7cXiukWQ"}
 
 requests.post(url+"/coupon/register", cookies=cookie, data={"coupon": coupon})
 

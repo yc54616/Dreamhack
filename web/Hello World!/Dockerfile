@@ -18,4 +18,4 @@ USER dreamhack
 
 RUN pip install --user -r requirements.txt
 
-CMD ["python3", "app.py"]
+CMD tail -f /dev/null

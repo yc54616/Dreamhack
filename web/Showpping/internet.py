@@ -44,6 +44,8 @@ def generate():
         key_value[3] = "10"
         key_value[5] = "0"
 
+    #name_asdfasdf_value_10_admin_0_value_2000_admin_1
+
     dict_data = {key_value[i]: key_value[i + 1] for i in range(0, len(key_value), 2)}
     print(dict_data)
     coupon_data_bytes = dumps(dict_data).encode()

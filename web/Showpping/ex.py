@@ -3,7 +3,7 @@ import fitz
 import json
 
 
-url = "http://host1.dreamhack.games:19091"
+url = "http://host1.dreamhack.games:12760"
 
 def loginSession():
     s = Session()

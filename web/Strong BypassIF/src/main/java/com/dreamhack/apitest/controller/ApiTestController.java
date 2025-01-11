@@ -82,7 +82,7 @@ public class ApiTestController {
         } else {
             url = scheme + "://" + host + path;
         }
-
+// eval:eval@127.0.0.1[@exploit.com
         String parsed_host = UriComponentsBuilder.fromHttpUrl(URLDecoder.decode(url)).build().getHost();
         System.out.println(parsed_host);
         System.out.println(url);

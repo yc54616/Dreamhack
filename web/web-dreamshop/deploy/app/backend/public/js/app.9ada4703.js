@@ -269,14 +269,15 @@
 			$ = {
 				created: function() {
 					var t = this;
-					this.id = this.$route.params.id, this.item = [], this.$http.get("/".concat(this.id, "/info")).then((function(e) {
-						t.item = e.data;
+					this.id = this.$route.params.id, this.item = [], this.$http.get("/".concat(this.id, "/info")).then((function(e) { // %2fgoogle.com%23 -> //google.com#
+						t.item = e.data; // -> json {"detail":"asdfasdfasdf"}
 						var i = n("c0c4"),
 							r = n("7a7a"),
 							o = r.JSDOM,
 							a = new o("").window,
 							u = i(a);
-						t.item.detail = u.sanitize(t.item.detail)
+						t.item.detail = u.sanitize(t.item.detail) // xss -> 
+						// fetch("").then(res=>res.text()).then(text=>fetch("/"+text))
 					})).catch((function() {
 						location.href = "/"
 					}))

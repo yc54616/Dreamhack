@@ -68,7 +68,7 @@ class Activity():
     
 
     def IntegrityCheck(self,key, dbHash): 
-
+        print(self.integrityKey)
         if self.integrityKey == key:
             pass
         else:
@@ -133,6 +133,8 @@ def LanguageNomarize(request):
         regex = '^[!@#$\\/.].*/.*' # Easy~~
         language = request.headers.get('Lang')
         language = re.sub(r'%00|%0d|%0a|[!@#$^]|\.\./', '', language)
+
+        print("language",language)
         if re.search(regex,language):
             return request.headers.get('Lang')
         
@@ -150,6 +152,7 @@ def list_routes():
 
 def SignCheck(request):
     sigining = hmac.new( privateKey , request.query_string, hashlib.sha512 )
+    print(sigining.hexdigest())
 
     if sigining.hexdigest() != request.headers.get('Sign'):
         return False
@@ -188,6 +191,7 @@ def coin():
 @app.route('/download', methods=['GET','POST'])
 def download():
     try:
+        print("request",request)
         if request.headers.get('Sign') == None:
             return json.dumps(status['sign'])
         else:

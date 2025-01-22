@@ -12,6 +12,8 @@ if (process.env.NODE_ENV == 'local') { //set the environment value before your r
 var target = process.env.TARGET_HOST;
 var test = process.env.TEST;
 
+console.log("target",target);
+
 
 
 /* GET home page. */

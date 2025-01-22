@@ -21,3 +21,5 @@ RUN apt-get install tzdata && \
 RUN pip install -r requirements.txt
 RUN pip install markupsafe==2.0.1 --force
 RUN pip install itsdangerous==2.0.1 --force
+EXPOSE 5000
+CMD tail -f /dev/null

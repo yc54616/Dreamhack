@@ -1,0 +1,12 @@
+[wargame]
+title = Autumn Leaves
+flag = **REDACTED**
+tags = web
+
+[vm]
+os = linux
+memory = 128
+disk = 1024
+ports = 8080/tcp
+allow_outgoing = false
+docker_compose = false

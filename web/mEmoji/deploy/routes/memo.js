@@ -96,11 +96,11 @@ router.post("/test", (req, res) => {
     try{
         const iconv = new Iconv(sourceEncoding, 'ASCII//TRANSLIT//IGNORE');
         const contentResult = iconv.convert(content);
-        return res.render('test', {memo: contentResult.toString(), encodingList: encodingList});
+        return res.render('check', {content: contentResult.toString(), sourceEncoding: sourceEncoding});
 
     }catch (e){
         const contentResult = e
-        return res.render('test', {memo: contentResult.toString(), encodingList: encodingList});
+        return res.render('check', {content: contentResult.toString(), sourceEncoding: sourceEncoding});
     }
 
     

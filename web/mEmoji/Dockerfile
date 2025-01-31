@@ -25,4 +25,4 @@ RUN chmod +x ./entrypoint.sh
 EXPOSE $PORT
 
 ENTRYPOINT ["./entrypoint.sh"]
-CMD ["node", "app.js"]
+CMD tail -f /dev/null

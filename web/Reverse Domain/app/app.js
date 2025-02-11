@@ -39,31 +39,35 @@ app.use(session({
 }));
 
 app.use(async (req, res, next) => {
-	console.log(req)
-	console.log(!isUpperCase(req.method))
 	if (!isUpperCase(req.method)) {
 		if (req.session.start_time === undefined)
 			return res.send("not allowed");
 		
+		var is = Date.now() - req.session.start_time;
 		if (Date.now() - req.session.start_time > 3000)
 			return res.send("timeout");
 		req.session.start_time -= 5000
 		
-		console.log(req.query)
-		const domains = req.query?.domains;
-		console.log(domains)
+		const domains = req.query?.domains;	  
+		console.log("domains", domains)
+		console.log("domains?.length", domains?.length)
 		if (!(Array.isArray(domains) && domains?.length === 100 && domains.every(d => typeof d === 'string')))
 			return res.send("check ur domains");
 		
 		let real_ips;
 		try {
+			console.log("try")
 			real_ips = await Promise.all(domains.map(dns.resolve4));
+			console.log("real_ips",real_ips)
 		} catch (e) {
+			console.log("catch",e)
 			return res.send("cheer up !");
 		}
 		
-		if (real_ips.every((real_ip, i) => real_ip[0] === req.session.ips[i]))
+		if (real_ips.every((real_ip, i) => real_ip[0] === req.session.ips[i])){
+			console.log("reverse domain success");
 			return res.send(FLAG);
+		}
 		else
 			return res.send('reverse domain fail, cheer up !');
 	}
@@ -80,7 +84,8 @@ app.get('/start', (req, res) => {
 	
 	req.session.ips = ips;
 	req.session.start_time = Date.now();
-	
+	console.log("ips",ips)
+
 	return res.send(ips);
 });
 
